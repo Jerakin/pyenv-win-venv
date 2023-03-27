@@ -4,7 +4,7 @@
 
 ### Dependencies
 
-As this project is using [pyenv-win](https://github.com/pyenv-win/pyenv-win)to install python versions it needs to be installed properly.
+As this project is using [pyenv-win](https://github.com/pyenv-win/pyenv-win) to install python versions it needs to be installed properly.
 
 ### Instructions
 

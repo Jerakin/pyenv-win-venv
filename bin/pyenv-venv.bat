@@ -14,3 +14,9 @@ IF "%1" == "deactivate" (
 IF "%1" == "list" (
 	call %~dp0pyenv-venv-list
 )
+IF "%1" == "help" (
+	call %~dp0pyenv-venv-help
+)
+IF "%1" == "" (
+	call %~dp0pyenv-venv-help
+)

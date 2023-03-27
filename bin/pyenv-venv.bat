@@ -2,6 +2,9 @@
 IF "%1" == "install" (
 	call %~dp0pyenv-venv-install %2 %3
 )
+IF "%1" == "uninstall" (
+	call %~dp0pyenv-venv-uninstall %2
+)
 IF "%1" == "activate" (
 	call %~dp0pyenv-venv-activate %2
 )

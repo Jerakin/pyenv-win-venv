@@ -46,6 +46,6 @@ _Note: this needs to be run in Powershell_
 ```
 
 
-# Automatic activation using `.python-version`
+## Automatic activation using `.python-version`
 **This is NOT possible**  
 While that is possible in the unix version [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv) as well as the powershell version [pyenv-win-venv](https://github.com/pyenv-win/pyenv-win-venv) cmd.exe does not have a life time file such as `profile.ps1`.

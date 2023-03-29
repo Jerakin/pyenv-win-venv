@@ -7,7 +7,7 @@ IF NOT EXIST %_PYENV_VERSIONS%\%1 (
 	echo Python v%1 is not installed. Install using 'pyenv install %1'
 	goto :eof
 )
-IF EXIST %_PYENV_VENV_VERSIONS%/versions/%2 (
+IF EXIST %_PYENV_VENV_VERSIONS%\versions\%2 (
 	echo '%2' already exists. Please choose another name for the env.
 	goto :eof
 )
@@ -28,9 +28,9 @@ goto :USE_VENV
 
 :USE_VIRTUALENV
 python -W ignore:DEPRECATION -m pip --disable-pip-version-check install --quiet virtualenv
-python -m virtualenv --quiet "%_PYENV_VENV_VERSIONS%/%2"
+python -m virtualenv --quiet "%_PYENV_VENV_VERSIONS%\%2"
 goto :eof
 
 :USE_VENV
-python -m venv %_PYENV_VENV_VERSIONS%/%2
+python -m venv %_PYENV_VENV_VERSIONS%\%2
 goto :eof

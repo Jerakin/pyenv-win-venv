@@ -12,5 +12,7 @@ IF "%1" == "" (
 	echo     install             install an env
 	echo     uninstall           uninstall an env
 	echo     list                list all installed environments versions
+	echo     which <command>     shows the path to an executable
 	echo     help                show this information
+
 )

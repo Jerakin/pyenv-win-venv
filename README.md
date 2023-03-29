@@ -11,11 +11,15 @@ As this project is using [pyenv-win](https://github.com/pyenv-win/pyenv-win) to 
 Download the repository and add the `/bin` folder to your PATH variable.
 
 **Git**  
-`git clone https://github.com/Jerakin/pyenv-win-venv "%USERPROFILE%\.pyenv-win-venv"`
+```
+git clone https://github.com/Jerakin/pyenv-win-venv "%USERPROFILE%\.pyenv-win-venv"
+```
 
 **Add to your PATH**  
 _Note: this needs to be run in Powershell_  
-`[System.Environment]::SetEnvironmentVariable('path', $env:USERPROFILE + "\.pyenv-win-venv\bin;"  + [System.Environment]::GetEnvironmentVariable('path', "User"),"User")`
+```
+[System.Environment]::SetEnvironmentVariable('path', $env:USERPROFILE + "\.pyenv-win-venv\bin;"  + [System.Environment]::GetEnvironmentVariable('path', "User"),"User")
+```
 
 ## Usage
 

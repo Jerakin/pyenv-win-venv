@@ -28,6 +28,14 @@ IF "%1" == "which" (
 	set IS_COMMAND=1
 	call %~dp0pyenv-venv-which
 )
+IF "%1" == "init" (
+	set IS_COMMAND=1
+	call %~dp0pyenv-venv-init
+)
+IF "%1" == "local" (
+	set IS_COMMAND=1
+	call %~dp0pyenv-venv-local
+)
 IF "%1" == "" (
 	set IS_COMMAND=1
 	call %~dp0pyenv-venv-help

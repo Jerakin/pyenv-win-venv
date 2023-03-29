@@ -17,6 +17,12 @@ IF "%1" == "list" (
 IF "%1" == "help" (
 	call %~dp0pyenv-venv-help
 )
+IF "%1" == "which" (
+	call %~dp0pyenv-venv-which
+)
 IF "%1" == "" (
+	call %~dp0pyenv-venv-help
+)
+IF %IS_COMMAND% EQU 0 (
 	call %~dp0pyenv-venv-help
 )

@@ -1,45 +1,14 @@
 @echo off 
-set IS_COMMAND=0
-IF "%1" == "install" (
-	set IS_COMMAND=1
-	call %~dp0pyenv-venv-install %2 %3
+
+IF EXIST %~dp0pyenv-venv-%1.bat (
+	call %~dp0pyenv-venv-%1.bat %2 %3
+	goto :eof
 )
-IF "%1" == "uninstall" (
-	set IS_COMMAND=1
-	call %~dp0pyenv-venv-uninstall %2
-)
-IF "%1" == "activate" (
-	set IS_COMMAND=1
-	call %~dp0pyenv-venv-activate %2
-)
-IF "%1" == "deactivate" (
-	set IS_COMMAND=1
-	call %~dp0pyenv-venv-deactivate
-)
-IF "%1" == "list" (
-	set IS_COMMAND=1
-	call %~dp0pyenv-venv-list
-)
-IF "%1" == "help" (
-	set IS_COMMAND=1
-	call %~dp0pyenv-venv-help
-)
-IF "%1" == "which" (
-	set IS_COMMAND=1
-	call %~dp0pyenv-venv-which
-)
-IF "%1" == "init" (
-	set IS_COMMAND=1
-	call %~dp0pyenv-venv-init
-)
-IF "%1" == "local" (
-	set IS_COMMAND=1
-	call %~dp0pyenv-venv-local
-)
+
 IF "%1" == "" (
-	set IS_COMMAND=1
 	call %~dp0pyenv-venv-help
+	goto :eof
 )
-IF %IS_COMMAND% EQU 0 (
-	call %~dp0pyenv-venv-help
-)
+
+call %~dp0pyenv-venv-help
+goto :eof
